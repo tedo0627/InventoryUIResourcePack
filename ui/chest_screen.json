@@ -1,0 +1,26 @@
+{
+    "namespace": "chest",
+
+    "small_chest_screen@common.inventory_screen_common": {
+		"$close_on_player_hurt|default": true,
+		"close_on_player_hurt": "$close_on_player_hurt",
+		"variables": [
+			{
+				"requires": "$desktop_screen",
+				"$screen_content": "chest.small_chest_panel",
+				"$screen_bg_content": "common.screen_background"
+			},
+			{
+				"requires": "$pocket_screen",
+				"$screen_content": "pocket_containers.small_chest_panel"
+			},
+			// start edit
+			{
+				"requires": "($container_title = 'entity.unknown.name')",
+				"$screen_content": "custom_screen.custom_panel",
+				"$container_title": "Backpack"
+			}
+			// end edit
+		]
+    }
+}

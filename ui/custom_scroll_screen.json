@@ -1,30 +1,38 @@
 {
-    "namespace": "custom_screen",
+    "namespace": "custom_scroll_screen",
 
     "custom_container_grid@common.container_grid": {
         "layer": 3,
         "$item_collection_name": "container_items"
     },
-    "custom_container_scroll_panel": {
+
+    "custom_scroll_panel_top_half": {
         "type": "panel",
-        "size": [ 168, 111 ],
-        "offset": [ 11, 3 ],
+        "$panel_top_half_size|default": [ "100%", 132 ], // large_chest_panel_top_half
+        "size": "$panel_top_half_size",
+        "offset": [ 0, 11 ],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
         "controls": [
             { "chest_label@chest.chest_label": {} },
             {
                 "scrolling_panel@common.container_scroll_panel": {
-                    "offset": [ 0, 15 ],
-                    "size": [ 180, 111 ], // アイテムを置くところのサイズ
-                    "$scrolling_content|default": "custom_screen.custom_container_grid",
-                    "$background_size": [ "93%", "100%" ],
-                    "$background_offset": [ 6, 1 ]
+                    "$scroll_view_port_size": [ "100%", "100%" ],
+                    "$scroll_view_port_size_touch": [ "100%", "100%" ],
+                    "$scroll_view_port_offset": [ 0, 0 ],
+                    "$scroll_view_port_offset_touch": [ 0, 0 ],
+                    "$scroll_bar_left_padding_size": [ 0, 0 ],
+                    "$scroll_bar_right_padding_size": [ 0, 0 ],
+                    "$view_port_size": [ "100%", "100%" ],
+                    "$scrolling_panel_size|default": [ 162, 108 ], // large_chest_grid
+                    "size": "$scrolling_panel_size",
+                    "$scrolling_content": "custom_scroll_screen.custom_container_grid"
                 }
             }
         ]
     },
-    "custom_panel": {
+
+    "custom_scroll_panel": {
       "type": "panel",
       "controls": [
         { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
@@ -37,7 +45,8 @@
         { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
         {
             "root_panel@common.root_panel": {
-                "size": [ 185, 225 ], // 白色のところのサイズ
+                "$root_panel_size|default": [ 176, 220 ], // large_chest_panel
+                "size": "$root_panel_size",
                 "layer": 1,
                 "controls": [
                     { "common_panel@common.common_panel": {} },
@@ -46,7 +55,7 @@
                             "type": "panel",
                             "layer": 5,
                             "controls": [
-                                { "small_chest_panel_top_half@custom_screen.custom_container_scroll_panel": {} },
+                                { "small_chest_panel_top_half@custom_scroll_screen.custom_scroll_panel_top_half": {} },
                                 { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
                                 { "hotbar_grid@common.hotbar_grid_template": {} },
                                 { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }

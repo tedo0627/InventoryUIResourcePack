@@ -1,5 +1,5 @@
 {
     "ui_defs": [
-        "ui/custom_screen.json"
+        "ui/custom_scroll_screen.json"
     ]
 }

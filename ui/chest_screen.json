@@ -4,6 +4,14 @@
     "small_chest_screen@common.inventory_screen_common": {
 		"$close_on_player_hurt|default": true,
 		"close_on_player_hurt": "$close_on_player_hurt",
+
+		"$keyword1": "§1§r§r§r§r§r§r§r§r§r§r",
+		"$keyword2": "§2§r§r§r§r§r§r§r§r§r§r",
+		"$keyword3": "§3§r§r§r§r§r§r§r§r§r§r",
+		"$keyword4": "§4§r§r§r§r§r§r§r§r§r§r",
+		"$keyword5": "§5§r§r§r§r§r§r§r§r§r§r",
+		"$keyword6": "§6§r§r§r§r§r§r§r§r§r§r",
+
 		"variables": [
 			{
 				"requires": "$desktop_screen",
@@ -14,13 +22,48 @@
 				"requires": "$pocket_screen",
 				"$screen_content": "pocket_containers.small_chest_panel"
 			},
-			// start edit
-			{
-				"requires": "($container_title = 'entity.unknown.name')",
-				"$screen_content": "custom_screen.custom_panel",
-				"$container_title": "Backpack"
+			{ // 9 * 1
+				"requires": "(not (($container_title - $keyword1) = $container_title))",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 162, 18 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+			},
+			{ // 9 * 2
+				"requires": "(not (($container_title - $keyword2) = $container_title))",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 162, 36 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+			},
+			{ // 9 * 3
+				"requires": "(not (($container_title - $keyword3) = $container_title))",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 162, 54 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+			},
+			{ // 9 * 4
+				"requires": "(not (($container_title - $keyword4) = $container_title))",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 162, 72 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+			},
+			{ // 9 * 5
+				"requires": "(not (($container_title - $keyword5) = $container_title))",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 162, 90 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+			},
+			{ // 9 * 6
+				"requires": "(not (($container_title - $keyword6) = $container_title))",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 162, 108 ],
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
 			}
-			// end edit
 		]
     }
 }

@@ -1,0 +1,28 @@
+name: compress
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          path: resourcepack
+
+      - name: compress pack
+        uses: famima65536/resourcepack-compressor@v2
+        with:
+          source: resourcepack
+          destination: artifact
+          pack-name: InventoryUIResourcePack
+
+      - name: Upload a Release Asset
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: artifact/InventoryUIResourcePack.mcpack

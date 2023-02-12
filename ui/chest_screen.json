@@ -5,12 +5,71 @@
 		"$close_on_player_hurt|default": true,
 		"close_on_player_hurt": "$close_on_player_hurt",
 
-		"$keyword1": "§1§r§r§r§r§r§r§r§r§r§r",
-		"$keyword2": "§2§r§r§r§r§r§r§r§r§r§r",
-		"$keyword3": "§3§r§r§r§r§r§r§r§r§r§r",
-		"$keyword4": "§4§r§r§r§r§r§r§r§r§r§r",
-		"$keyword5": "§5§r§r§r§r§r§r§r§r§r§r",
-		"$keyword6": "§6§r§r§r§r§r§r§r§r§r§r",
+		"$isCustomInv": "(not (($container_title - §r§r§r§c§r§r§r) = $container_title))",
+
+		"$keyword12": "§r§r§r§c§r§r§r§1§2§r",
+		"$keyword11": "§r§r§r§c§r§r§r§1§1§r",
+		"$keyword14": "§r§r§r§c§r§r§r§1§4§r",
+		"$keyword15": "§r§r§r§c§r§r§r§1§5§r",
+		"$keyword13": "§r§r§r§c§r§r§r§1§3§r",
+		"$keyword16": "§r§r§r§c§r§r§r§1§6§r",
+		
+		"$keyword21": "§r§r§r§c§r§r§r§2§1§r",
+		"$keyword22": "§r§r§r§c§r§r§r§2§2§r",
+		"$keyword23": "§r§r§r§c§r§r§r§2§3§r",
+		"$keyword24": "§r§r§r§c§r§r§r§2§4§r",
+		"$keyword25": "§r§r§r§c§r§r§r§2§5§r",
+		"$keyword26": "§r§r§r§c§r§r§r§2§6§r",
+
+		"$keyword31": "§r§r§r§c§r§r§r§3§1§r",
+		"$keyword32": "§r§r§r§c§r§r§r§3§2§r",
+		"$keyword33": "§r§r§r§c§r§r§r§3§3§r",
+		"$keyword34": "§r§r§r§c§r§r§r§3§4§r",
+		"$keyword35": "§r§r§r§c§r§r§r§3§5§r",
+		"$keyword36": "§r§r§r§c§r§r§r§3§6§r",
+
+		"$keyword41": "§r§r§r§c§r§r§r§4§1§r",
+		"$keyword42": "§r§r§r§c§r§r§r§4§2§r",
+		"$keyword43": "§r§r§r§c§r§r§r§4§3§r",
+		"$keyword44": "§r§r§r§c§r§r§r§4§4§r",
+		"$keyword45": "§r§r§r§c§r§r§r§4§5§r",
+		"$keyword46": "§r§r§r§c§r§r§r§4§6§r",
+
+		"$keyword51": "§r§r§r§c§r§r§r§5§1§r",
+		"$keyword52": "§r§r§r§c§r§r§r§5§2§r",
+		"$keyword53": "§r§r§r§c§r§r§r§5§3§r",
+		"$keyword54": "§r§r§r§c§r§r§r§5§4§r",
+		"$keyword55": "§r§r§r§c§r§r§r§5§5§r",
+		"$keyword56": "§r§r§r§c§r§r§r§5§6§r",
+
+		"$keyword61": "§r§r§r§c§r§r§r§6§1§r",
+		"$keyword62": "§r§r§r§c§r§r§r§6§2§r",
+		"$keyword63": "§r§r§r§c§r§r§r§6§3§r",
+		"$keyword64": "§r§r§r§c§r§r§r§6§4§r",
+		"$keyword65": "§r§r§r§c§r§r§r§6§5§r",
+		"$keyword66": "§r§r§r§c§r§r§r§6§6§r",
+		
+		"$keyword71": "§r§r§r§c§r§r§r§7§1§r",
+		"$keyword72": "§r§r§r§c§r§r§r§7§2§r",
+		"$keyword73": "§r§r§r§c§r§r§r§7§3§r",
+		"$keyword74": "§r§r§r§c§r§r§r§7§4§r",
+		"$keyword75": "§r§r§r§c§r§r§r§7§5§r",
+		"$keyword76": "§r§r§r§c§r§r§r§7§6§r",
+
+		"$keyword81": "§r§r§r§c§r§r§r§8§1§r",
+		"$keyword82": "§r§r§r§c§r§r§r§8§2§r",
+		"$keyword83": "§r§r§r§c§r§r§r§8§3§r",
+		"$keyword84": "§r§r§r§c§r§r§r§8§4§r",
+		"$keyword85": "§r§r§r§c§r§r§r§8§5§r",
+		"$keyword86": "§r§r§r§c§r§r§r§8§6§r",
+
+		"$keyword91": "§r§r§r§c§r§r§r§9§1§r",
+		"$keyword92": "§r§r§r§c§r§r§r§9§2§r",
+		"$keyword93": "§r§r§r§c§r§r§r§9§3§r",
+		"$keyword94": "§r§r§r§c§r§r§r§9§4§r",
+		"$keyword95": "§r§r§r§c§r§r§r§9§5§r",
+		"$keyword96": "§r§r§r§c§r§r§r§9§6§r",
+		
 
 		"variables": [
 			{
@@ -22,47 +81,392 @@
 				"requires": "$pocket_screen",
 				"$screen_content": "pocket_containers.small_chest_panel"
 			},
-			{ // 9 * 1
-				"requires": "(not (($container_title - $keyword1) = $container_title))",
+			// Line1
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword11) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 130 ],
 				"$panel_top_half_size": [ "100%", 42 ],
-				"$scrolling_panel_size": [ 162, 18 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 18 ]
 			},
-			{ // 9 * 2
-				"requires": "(not (($container_title - $keyword2) = $container_title))",
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword12) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 148 ],
 				"$panel_top_half_size": [ "100%", 60 ],
-				"$scrolling_panel_size": [ 162, 36 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 36 ]
 			},
-			{ // 9 * 3
-				"requires": "(not (($container_title - $keyword3) = $container_title))",
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword13) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 166 ],
 				"$panel_top_half_size": [ "100%", 78 ],
-				"$scrolling_panel_size": [ 162, 54 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 54 ]
 			},
-			{ // 9 * 4
-				"requires": "(not (($container_title - $keyword4) = $container_title))",
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword14) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 184 ],
 				"$panel_top_half_size": [ "100%", 96 ],
-				"$scrolling_panel_size": [ 162, 72 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 72 ]
 			},
-			{ // 9 * 5
-				"requires": "(not (($container_title - $keyword5) = $container_title))",
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword15) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 202 ],
 				"$panel_top_half_size": [ "100%", 114 ],
-				"$scrolling_panel_size": [ 162, 90 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 90 ]
 			},
-			{ // 9 * 6
-				"requires": "(not (($container_title - $keyword6) = $container_title))",
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword16) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
 				"$root_panel_size": [ 176, 220 ],
 				"$panel_top_half_size": [ "100%", 132 ],
-				"$scrolling_panel_size": [ 162, 108 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$scrolling_panel_size": [ 18, 108 ]
+			},
+			//Line2
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword21) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 36, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword22) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 36, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword23) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 36, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword24) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 36, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword25) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 36, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword26) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 36, 108 ]
+			},
+			// Line3
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword31) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 54, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword32) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 54, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword33) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 54, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword34) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 54, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword35) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 54, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword36) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 54, 108 ]
+			},
+			// Line4
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword41) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 72, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword42) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 72, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword43) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 72, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword44) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 72, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword45) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 72, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword46) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 72, 108 ]
+			},
+			// Line5
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword51) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 90, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword52) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 90, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword53) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 90, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword54) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 90, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword55) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 90, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword56) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 90, 108 ]
+			},
+			// Line6
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword61) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 108, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword62) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 108, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword63) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 108, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword64) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 108, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword65) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 108, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword66) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 108, 108 ]
+			},
+			// Line7
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword71) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 126, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword72) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 126, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword73) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 126, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword74) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 126, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword75) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 126, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword76) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 126, 108 ]
+			},
+			// Line8
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword81) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 144, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword82) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 144, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword83) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 144, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword84) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 144, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword85) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 144, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword86) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 144, 108 ]
+			},
+			// Line9
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword91) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 130 ],
+				"$panel_top_half_size": [ "100%", 42 ],
+				"$scrolling_panel_size": [ 162, 18 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword92) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 148 ],
+				"$panel_top_half_size": [ "100%", 60 ],
+				"$scrolling_panel_size": [ 162, 36 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword93) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 166 ],
+				"$panel_top_half_size": [ "100%", 78 ],
+				"$scrolling_panel_size": [ 162, 54 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword94) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 184 ],
+				"$panel_top_half_size": [ "100%", 96 ],
+				"$scrolling_panel_size": [ 162, 72 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword95) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 202 ],
+				"$panel_top_half_size": [ "100%", 114 ],
+				"$scrolling_panel_size": [ 162, 90 ]
+			},
+			{
+				"requires": "(isCustomInv and not (($container_title - $keyword96) = $container_title))",
+				"$screen_content": "custom_scroll_screen.custom_scroll_panel",
+				"$root_panel_size": [ 176, 220 ],
+				"$panel_top_half_size": [ "100%", 132 ],
+				"$scrolling_panel_size": [ 162, 108 ]
 			}
 		]
     }

@@ -19,10 +19,10 @@ jobs:
         with:
           source: resourcepack
           destination: artifact
-          pack-name: InventoryUIResourcePack
+          pack-name: CustomInventoryResourcePack
 
       - name: Upload a Release Asset
         uses: shogo82148/actions-upload-release-asset@v1
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: artifact/InventoryUIResourcePack.mcpack
+          asset_path: artifact/CustomInventoryResourcePack.mcpack

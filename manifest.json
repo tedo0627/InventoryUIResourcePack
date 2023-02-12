@@ -1,18 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Inventory UI Resource Pack",
-        "description": "Inventory UI Resource Pack",
-        "uuid": "21f0427f-572a-416d-a90e-c5d9becb0fa3",
-        "version": [1, 0, 0],
+        "name": "Custom Inventory Resource Pack",
+        "description": "Custom Inventory Resource Pack",
+        "uuid": "06c1c097-e8ea-4742-9ad6-3801e69137ae",
+        "version": [2, 0, 0],
         "min_engine_version": [1, 18, 0]
     },
     "modules": [
         {
             "type": "resources",
-            "description": "Inventory UI Resource Pack",
-            "uuid": "1f785f22-4eec-471d-ba1c-4b5fc2190e9e",
-            "version": [1, 0, 0]
+            "description": "Custom Inventory Resource Pack",
+            "uuid": "20b382c3-0d21-4d3d-81a1-e8a4c68c36a6",
+            "version": [2, 0, 0]
         }
     ]
 }

@@ -23,7 +23,6 @@
                     "$scroll_view_port_offset_touch": [ 0, 0 ],
                     "$scroll_bar_left_padding_size": [ 0, 0 ],
                     "$scroll_bar_right_padding_size": [ 0, 0 ],
-                    "$view_port_size": [ "100%", "100%" ],
                     "$scrolling_panel_size|default": [ 162, 108 ], // large_chest_grid
                     "size": "$scrolling_panel_size",
                     "$scrolling_content": "custom_scroll_screen.custom_container_grid"

@@ -1,12 +1,12 @@
 {
     "namespace": "vertical_screen",
 
-    "vertical_screen_grid@common.container_grid": {
+    "grid@common.container_grid": {
         "$item_collection_name": "container_items"
     },
 
     // base: https://github.com/Mojang/bedrock-samples/blob/d2c831e6028b60bb6bf19bc45de10b77df6eb8f0/resource_pack/ui/chest_screen.json#L54
-    "vertical_screen_panel_top_half": {
+    "panel_top_half": {
         "type": "panel",
         // "size": [ "100%", "50%" ],
         "$panel_top_half_size|default": [ "100%", 132 ], // add
@@ -26,7 +26,7 @@
                 // "small_chest_grid@chest.small_chest_grid": {
                 //     "offset": [ 7, 9 ]
                 // }
-                "small_chest_grid@vertical_screen.vertical_screen_grid": { // change
+                "small_chest_grid@vertical_screen.grid": { // change
                     "offset": [ 0, 9 ]
                 }
             }
@@ -53,7 +53,7 @@
                                 "layer": 5,
                                 "controls": [
                                     // { "small_chest_panel_top_half@chest.small_chest_panel_top_half": {} },
-                                    { "small_chest_panel_top_half@vertical_screen.vertical_screen_panel_top_half": {} }, // change
+                                    { "small_chest_panel_top_half@vertical_screen.panel_top_half": {} }, // change
                                     { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
                                     { "hotbar_grid@common.hotbar_grid_template": {} },
                                     { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },

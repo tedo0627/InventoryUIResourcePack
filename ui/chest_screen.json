@@ -90,42 +90,42 @@
 				"$root_panel_size": [ 184, 130 ],
 				"$panel_top_half_size": [ "100%", 42 ],
 				"$scrolling_panel_size": [ 168, 18 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			{ // 9 * 2
 				"requires": "(not (($container_title_copy - $keyword_scroll2) = $container_title_copy)) and $desktop_screen",
 				"$root_panel_size": [ 184, 148 ],
 				"$panel_top_half_size": [ "100%", 60 ],
 				"$scrolling_panel_size": [ 168, 36 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			{ // 9 * 3
 				"requires": "(not (($container_title_copy - $keyword_scroll3) = $container_title_copy)) and $desktop_screen",
 				"$root_panel_size": [ 184, 166 ],
 				"$panel_top_half_size": [ "100%", 78 ],
 				"$scrolling_panel_size": [ 168, 54 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			{ // 9 * 4
 				"requires": "(not (($container_title_copy - $keyword_scroll4) = $container_title_copy)) and $desktop_screen",
 				"$root_panel_size": [ 184, 184 ],
 				"$panel_top_half_size": [ "100%", 96 ],
 				"$scrolling_panel_size": [ 168, 72 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			{ // 9 * 5
 				"requires": "(not (($container_title_copy - $keyword_scroll5) = $container_title_copy)) and $desktop_screen",
 				"$root_panel_size": [ 184, 202 ],
 				"$panel_top_half_size": [ "100%", 114 ],
 				"$scrolling_panel_size": [ 168, 90 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			{ // 9 * 6
 				"requires": "(not (($container_title_copy - $keyword_scroll6) = $container_title_copy)) and $desktop_screen",
 				"$root_panel_size": [ 184, 220 ],
 				"$panel_top_half_size": [ "100%", 132 ],
 				"$scrolling_panel_size": [ 168, 108 ],
-				"$screen_content": "custom_scroll_screen.custom_scroll_panel"
+				"$screen_content": "vertical_scroll_screen.vertical_scroll_screen_panel"
 			},
 			
 			// pocket
@@ -133,7 +133,6 @@
 			{
 				"requires": "(not (($container_title_copy - $keyword_pocket) = $container_title_copy)) and $pocket_screen",
 				"$screen_content": "custom_pocket_containers.panel"
-			
 			}
 		]
     }
